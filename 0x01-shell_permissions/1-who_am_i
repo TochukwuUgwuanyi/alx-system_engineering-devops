@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "The current user by reading \$USER: $USER"
+id -u
