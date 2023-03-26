@@ -1,0 +1,21 @@
+https://miro.com/app/board/uXjVMZA-PNY=/
+
+Secured and monitored web infrastructure
+In addition of having Server backup and Load balancer for evenly distribution of web traffics to the website. We now have secured and monitored web infrastructure with firewalls and SSL certificate.
+
+Explained some specifics about this infrastructure:
+
+For every additional element, why you are adding: 
+
+a.Firewall: A Firewall is a network security device that monitors and filters incoming and outgoing network traffic based on an organization’s previously established security policies. At its most basic, a firewall is essentially the barrier that sits between a private internal network and the public Internet. A firewall’s main purpose is to allow non-threatening traffic in and to keep dangerous traffic out.
+
+b.Mentoring Service: Network monitoring is the use of a system that constantly monitors a computer network for slow or failing components and that notifies the network administrator in case of outages or other trouble. With An Installed Collector (Sumologic) is a Java agent that receives logs and metrics from its Sources and then encrypts, compresses, and sends the data to the Sumo service
+
+What are firewalls for: A firewall’s main purpose is to allow non-threatening traffic in and to keep dangerous traffic out.
+
+Why is the traffic served over HTTPS: With HTTPS, data is encrypted in transit in both directions: going to and coming from the origin server. The protocol keeps communications secure so that malicious parties can't observe what data is being sent.
+
+What monitoring is used for: Monitoring tools are used to continuously keep track of the status of the system in use, in order to have the earliest warning of failures, defects or problems and to improve them. 
+
+How the monitoring tool is collecting data: Network monitoring tools collect data in some form from active network devices, such as routers, switches, load balancers, servers, firewalls, or dedicated probes, which they analyze to paint a picture of the network's condition.
+
