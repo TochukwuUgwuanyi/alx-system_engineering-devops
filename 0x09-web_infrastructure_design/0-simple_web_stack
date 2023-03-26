@@ -1,0 +1,20 @@
+https://webwhiteboard.com/board/Ek19OZ27ArJqXGyKKc65iOt34z5rLYP1/
+
+Simple Web Infrastructure
+
+Explained some specifics about this infrastructure:
+
+Server: In computing, a server is a piece of computer hardware or software (computer program) that provides functionality for other programs or devices, called "clients."
+the role of the domain name: Domain names provide an easy way to recognize and memorize the names using the numerically addressed Internet resources. Example: www.google.com translates to 8.8.8.8
+type of DNS record www is in www.foobar.com: The record type is A Record which maps website to a specific IP address.
+the role of the web server: The main role of a web server is to display website content through storing, processing and delivering webpages to users.
+the role of the application server: An application server is a software framework that provides both facilities to create web applications and a server environment to run them.
+the role of the database: A database is a store house for a large amount of data.
+the server using to communicate with the computer of the user requesting the website: Communication between the client and the server occurs over the internet network through the TCP/IP protocol suite.
+
+The Isses Are with This Infrastructure:
+
+SPOF:A SPOF or single point of failure is any non-redundant part of a system that, if dysfunctional, would cause the entire system to fail. My SPOF includes the internet link, mySQL server, application server.
+Downtime when maintenance needed (like deploying new code web server needs to be restarted): During maintenance, all services are down and this is do the fact that I only have one server.
+Cannot scale if too much incoming traffic: This is because I do not have load balancer in my web infrastructure.
+
