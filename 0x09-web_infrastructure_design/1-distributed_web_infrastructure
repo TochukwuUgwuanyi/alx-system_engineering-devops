@@ -1,0 +1,26 @@
+https://webwhiteboard.com/board/Ek19OZ27ArJqXGyKKc65iOt34z5rLYP1/
+Distributed web infrastructure
+Having Server backup and Load balancer for evenly distribution of web traffics to the website.
+
+Explained some specifics about this infrastructure:
+
+For every additional element, why you are adding: 
+a.Addition of New Server: The new server is for backup incase Server A goes down. Both servers work together with Load Balancer in distributing traffic to the website. 
+b.HAProxy Load Balancer: It helps to distribute traffic during pick period.
+
+What distribution algorithm your load balancer is configured with and how it works: HAProxy is a free and open-source software that provides a high availability load balancer and reverse proxy for TCP and HTTP-based applications that spreads requests across multiple servers. HAProxy Algorithms
+Round Robin: This algorithm is the most commonly implemented. It works by using each server behind the load balancer in turns, according to their weights. It’s also probably the smoothest and most fair algorithm as the servers’ processing time stays equally distributed. As a dynamic algorithm, Round Robin allows server weights to be adjusted on the go.
+
+Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both: Yes, 
+
+a.Active/Passive – one HAProxy load balancer act as a primary and the other will only be activated when the primary load balancer fails or is unresponsive.
+b.Active/Active – both HAProxy load balancers are active and either one can process client requests. As long as one of the load balancers is up and available, requests will be handled.
+c.Difference: In the active/active setup, the performance level will be higher than in an active/passive setup. However, in an active/passive, there is a consistent performance level when one fails whereas in active/active when one fails, performance level will drop by half as perceived by clients.
+How a database Primary-Replica (Master-Slave) cluster works: Master-slave replication enables data from one database server (the master) to be replicated to one or more other database servers (the slaves). The master logs the updates, which then ripple through to the slaves
+
+The Issues Are with This Infrastructure:
+
+SPOF: A SPOF or single point of failure is any non-redundant part of a system that, if dysfunctional, would cause the entire system to fail. My SPOF includes the internet link, mySQL,
+Security issues (no firewall, no HTTPS): These currently web infrastructure is faced with no firewall which make the infrastructure prone to attackers and no HTTPS (It uses encryption for secure communication over a computer network, and is widely used on the Internet) implemented making the whole web infrastructure vulnerable and easy to attack.
+No monitoring: with monitoring tools deployed, it will be difficult for us to know how best to improve the web infrastructure in future.
+
