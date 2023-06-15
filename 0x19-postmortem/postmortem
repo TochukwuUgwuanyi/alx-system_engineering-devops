@@ -1,0 +1,18 @@
+0x19. Postmortem
+As an IT Manager I have faced so many network outages: I use Cisco Meraki based network devices where I work.
+Requirements:
+Issue Summary: The head office network outage during perk period from 11am to 5pm (WAT). It caused no internet for staff to work. Staff were experiencing not being able to send or receive emails or do any work that requires internet usage and 500 staff were affected by this outage.The root cause was Internet Service Provider downtime.
+Timeline:
+The issue was detected by 11:00am (WAT)
+The issue was detected via staff complaint, notification from cisco meraki MX, and from the PRTG monitoring platform.
+The actions taken include checking the light indicator on the Cisco Meraki MX which was Amber color meaning there is no internet, the PRTG monitoring platform showing zero traffic and pinging the Internet Service Provider public IP address both the IP and gateway.
+No misleading investigation taken.
+To my unit. Network Team.
+We immediately escalated to the Internet Service Provider to work on our link.
+Root cause and resolution:
+The root cause as a result of fiber cut due to construction work going on along the fiber transmission path.
+Re-cladding or replacement of fiber.
+Corrective and preventative measures:
+Suggesting that we have a backup link so that once the primary link is down, the backup will come up immediately to minimize down time.
+a list of tasks to address the issue: Be on alert, always monitoring the PRTG live traffic, and pinging the public IP addresses.
+
